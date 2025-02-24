@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdbjv1gw11eeb"]
+
+[ext_resource type="Texture2D" uid="uid://dr64g7t4h0q4p" path="res://FishAssets/background.png" id="1_4h4mr"]
+[ext_resource type="Texture2D" uid="uid://bh5odxfcte83o" path="res://FishAssets/yellowfish.png" id="1_mti15"]
+[ext_resource type="Script" path="res://yellowfish.gd" id="2_3ihl7"]
+[ext_resource type="Texture2D" uid="uid://dcq46ac2ye250" path="res://FishAssets/shark.png" id="4_cebg0"]
+[ext_resource type="Script" path="res://shark.gd" id="5_n30ay"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1264, 629)
+scale = Vector2(1.74375, 1.175)
+texture = ExtResource("1_4h4mr")
+
+[node name="Yellowfish" type="Sprite2D" parent="."]
+position = Vector2(1277, 745)
+scale = Vector2(0.114, 0.1)
+texture = ExtResource("1_mti15")
+script = ExtResource("2_3ihl7")
+
+[node name="Camera2D" type="Camera2D" parent="Yellowfish"]
+position = Vector2(53.2623, 60.6061)
+
+[node name="Shark" type="Sprite2D" parent="."]
+position = Vector2(760, 738)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_cebg0")
+script = ExtResource("5_n30ay")
